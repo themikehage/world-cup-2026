@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026 - United2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PLAYFAIR:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🏆</span>
+                <span class="logo-text">FIFA WC 2026</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#venues">Sedes</a></li>
+                <li><a href="#teams">Equipos</a></li>
+                <li><a href="#schedule">Calendario</a></li>
+                <li><a href="#matches">Partidos</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Junio 11 - Julio 19, 2026</div>
+            <h1 class="hero-title">
+                <span class="title-fifa">FIFA</span>
+                <span class="title-world">WORLD CUP</span>
+                <span class="title-year">2026</span>
+            </h1>
+            <p class="hero-subtitle">United2026 - El primer Mundial con tres naciones sede</p>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#teams" class="btn btn-primary">Ver Equipos</a>
+                <a href="#schedule" class="btn btn-secondary">Calendario</a>
+            </div>
+        </div>
+        <div class="hero-trophy">
+            <svg viewBox="0 0 100 120" class="trophy-icon">
+                <path d="M50 5 L55 25 L75 25 L60 38 L65 58 L50 45 L35 58 L40 38 L25 25 L45 25 Z" fill="#D4AF37"/>
+                <rect x="40" y="45" width="20" height="30" fill="#D4AF37"/>
+                <rect x="35" y="75" width="30" height="8" rx="2" fill="#D4AF37"/>
+                <rect x="30" y="83" width="40" height="12" rx="3" fill="#D4AF37"/>
+                <path d="M20 20 Q10 25 15 40 Q20 50 30 45" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                <path d="M80 20 Q90 25 85 40 Q80 50 70 45" stroke="#D4AF37" stroke-width="3" fill="none"/>
+            </svg>
+        </div>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <!-- Venues Section -->
+    <section id="venues" class="section venues">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">16 Ciudades</span>
+                <h2 class="section-title">Sedes del Mundial</h2>
+                <p class="section-subtitle">Estados Unidos, México y Canadá</p>
+            </div>
+            <div class="venues-grid">
+                <!-- USA Venues -->
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>New York / New Jersey</h3>
+                        <p class="venue-stadium">MetLife Stadium</p>
+                        <p class="venue-capacity">80,663 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Dallas</h3>
+                        <p class="venue-stadium">AT&T Stadium</p>
+                        <p class="venue-capacity">70,649 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Los Angeles</h3>
+                        <p class="venue-stadium">SoFi Stadium</p>
+                        <p class="venue-capacity">70,492 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Kansas City</h3>
+                        <p class="venue-stadium">Arrowhead Stadium</p>
+                        <p class="venue-capacity">69,045 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>San Francisco</h3>
+                        <p class="venue-stadium">Levi's Stadium</p>
+                        <p class="venue-capacity">68,827 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Houston</h3>
+                        <p class="venue-stadium">NRG Stadium</p>
+                        <p class="venue-capacity">68,777 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Philadelphia</h3>
+                        <p class="venue-stadium">Lincoln Financial Field</p>
+                        <p class="venue-capacity">68,324 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Atlanta</h3>
+                        <p class="venue-stadium">Mercedes-Benz Stadium</p>
+                        <p class="venue-capacity">68,239 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Seattle</h3>
+                        <p class="venue-stadium">Lumen Field</p>
+                        <p class="venue-capacity">66,925 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Miami</h3>
+                        <p class="venue-stadium">Hard Rock Stadium</p>
+                        <p class="venue-capacity">64,478 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="usa">
+                    <div class="venue-image">
+                        <div class="venue-flag usa"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Boston</h3>
+                        <p class="venue-stadium">Gillette Stadium</p>
+                        <p class="venue-capacity">64,146 espectadores</p>
+                    </div>
+                </div>
+                <!-- Mexico Venues -->
+                <div class="venue-card" data-country="mexico">
+                    <div class="venue-image">
+                        <div class="venue-flag mexico"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Ciudad de México</h3>
+                        <p class="venue-stadium">Estadio Azteca</p>
+                        <p class="venue-capacity">80,824 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="mexico">
+                    <div class="venue-image">
+                        <div class="venue-flag mexico"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Monterrey</h3>
+                        <p class="venue-stadium">Estadio BBVA</p>
+                        <p class="venue-capacity">51,243 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="mexico">
+                    <div class="venue-image">
+                        <div class="venue-flag mexico"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Guadalajara</h3>
+                        <p class="venue-stadium">Estadio Akron</p>
+                        <p class="venue-capacity">45,664 espectadores</p>
+                    </div>
+                </div>
+                <!-- Canada Venues -->
+                <div class="venue-card" data-country="canada">
+                    <div class="venue-image">
+                        <div class="venue-flag canada"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Vancouver</h3>
+                        <p class="venue-stadium">BC Place</p>
+                        <p class="venue-capacity">52,497 espectadores</p>
+                    </div>
+                </div>
+                <div class="venue-card" data-country="canada">
+                    <div class="venue-image">
+                        <div class="venue-flag canada"></div>
+                    </div>
+                    <div class="venue-info">
+                        <h3>Toronto</h3>
+                        <p class="venue-stadium">BMO Field</p>
+                        <p class="venue-capacity">43,036 espectadores</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section -->
+    <section id="teams" class="section teams">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">48 Equipos</span>
+                <h2 class="section-title">Equipos Participantes</h2>
+                <p class="section-subtitle">12 grupos de 4 equipos cada uno</p>
+            </div>
+            <div class="groups-container">
+                <!-- Group A -->
+                <div class="group-card" data-group="A">
+                    <div class="group-header">
+                        <span class="group-letter">A</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-mexico"></span>
+                            <span class="team-name">México</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-southafrica"></span>
+                            <span class="team-name">Sudáfrica</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-southkorea"></span>
+                            <span class="team-name">Corea del Sur</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-czech"></span>
+                            <span class="team-name">República Checa</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Son Heung-min (Corea del Sur)</span>
+                    </div>
+                </div>
+
+                <!-- Group B -->
+                <div class="group-card" data-group="B">
+                    <div class="group-header">
+                        <span class="group-letter">B</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-switzerland"></span>
+                            <span class="team-name">Suiza</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-canada"></span>
+                            <span class="team-name">Canadá</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-qatar"></span>
+                            <span class="team-name">Catar</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-bosnia"></span>
+                            <span class="team-name">Bosnia y Herzegovina</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Alphonso Davies (Canadá)</span>
+                    </div>
+                </div>
+
+                <!-- Group C -->
+                <div class="group-card" data-group="C">
+                    <div class="group-header">
+                        <span class="group-letter">C</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-brazil"></span>
+                            <span class="team-name">Brasil</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-haiti"></span>
+                            <span class="team-name">Haití</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-morocco"></span>
+                            <span class="team-name">Marruecos</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-scotland"></span>
+                            <span class="team-name">Escocia</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Vinícius Jr. (Brasil)</span>
+                    </div>
+                </div>
+
+                <!-- Group D -->
+                <div class="group-card" data-group="D">
+                    <div class="group-header">
+                        <span class="group-letter">D</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-australia"></span>
+                            <span class="team-name">Australia</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-paraguay"></span>
+                            <span class="team-name">Paraguay</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-turkey"></span>
+                            <span class="team-name">Turquía</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-usa"></span>
+                            <span class="team-name">Estados Unidos</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Christian Pulisic (USA)</span>
+                    </div>
+                </div>
+
+                <!-- Group E -->
+                <div class="group-card" data-group="E">
+                    <div class="group-header">
+                        <span class="group-letter">E</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-curacao"></span>
+                            <span class="team-name">Curaçao</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-ecuador"></span>
+                            <span class="team-name">Ecuador</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-germany"></span>
+                            <span class="team-name">Alemania</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-ivorycoast"></span>
+                            <span class="team-name">Costa de Marfil</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Jamal Musiala (Alemania)</span>
+                    </div>
+                </div>
+
+                <!-- Group F -->
+                <div class="group-card" data-group="F">
+                    <div class="group-header">
+                        <span class="group-letter">F</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-japan"></span>
+                            <span class="team-name">Japón</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-netherlands"></span>
+                            <span class="team-name">Países Bajos</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-sweden"></span>
+                            <span class="team-name">Suecia</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-tunisia"></span>
+                            <span class="team-name">Túnez</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Virgil van Dijk (Países Bajos)</span>
+                    </div>
+                </div>
+
+                <!-- Group G -->
+                <div class="group-card" data-group="G">
+                    <div class="group-header">
+                        <span class="group-letter">G</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-belgium"></span>
+                            <span class="team-name">Bélgica</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-egypt"></span>
+                            <span class="team-name">Egipto</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-iran"></span>
+                            <span class="team-name">Irán</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-newzealand"></span>
+                            <span class="team-name">Nueva Zelanda</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Mohamed Salah (Egipto)</span>
+                    </div>
+                </div>
+
+                <!-- Group H -->
+                <div class="group-card" data-group="H">
+                    <div class="group-header">
+                        <span class="group-letter">H</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-capeverde"></span>
+                            <span class="team-name">Cabo Verde</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-saudiarabia"></span>
+                            <span class="team-name">Arabia Saudita</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-spain"></span>
+                            <span class="team-name">España</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-uruguay"></span>
+                            <span class="team-name">Uruguay</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Lamine Yamal (España)</span>
+                    </div>
+                </div>
+
+                <!-- Group I -->
+                <div class="group-card" data-group="I">
+                    <div class="group-header">
+                        <span class="group-letter">I</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-france"></span>
+                            <span class="team-name">Francia</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-iraq"></span>
+                            <span class="team-name">Irak</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-norway"></span>
+                            <span class="team-name">Noruega</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-senegal"></span>
+                            <span class="team-name">Senegal</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Kylian Mbappé (Francia)</span>
+                    </div>
+                </div>
+
+                <!-- Group J -->
+                <div class="group-card" data-group="J">
+                    <div class="group-header">
+                        <span class="group-letter">J</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-algeria"></span>
+                            <span class="team-name">Argelia</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-argentina"></span>
+                            <span class="team-name">Argentina</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-austria"></span>
+                            <span class="team-name">Austria</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-jordan"></span>
+                            <span class="team-name">Jordania</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Lionel Messi (Argentina)</span>
+                    </div>
+                </div>
+
+                <!-- Group K -->
+                <div class="group-card" data-group="K">
+                    <div class="group-header">
+                        <span class="group-letter">K</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-colombia"></span>
+                            <span class="team-name">Colombia</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-drcongo"></span>
+                            <span class="team-name">RD Congo</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-portugal"></span>
+                            <span class="team-name">Portugal</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-uzbekistan"></span>
+                            <span class="team-name">Uzbekistán</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Cristiano Ronaldo (Portugal)</span>
+                    </div>
+                </div>
+
+                <!-- Group L -->
+                <div class="group-card" data-group="L">
+                    <div class="group-header">
+                        <span class="group-letter">L</span>
+                        <div class="group-teams-count">4 equipos</div>
+                    </div>
+                    <div class="group-teams">
+                        <div class="team-row">
+                            <span class="team-flag flag-croatia"></span>
+                            <span class="team-name">Croacia</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-england"></span>
+                            <span class="team-name">Inglaterra</span>
+                            <span class="team-star">⭐</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-ghana"></span>
+                            <span class="team-name">Ghana</span>
+                        </div>
+                        <div class="team-row">
+                            <span class="team-flag flag-panama"></span>
+                            <span class="team-name">Panamá</span>
+                        </div>
+                    </div>
+                    <div class="group-star">
+                        <span class="star-label">⭐ Estrella:</span>
+                        <span class="star-player">Harry Kane (Inglaterra)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section schedule">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Fechas Importantes</span>
+                <h2 class="section-title">Calendario del Torneo</h2>
+                <p class="section-subtitle">104 partidos en 39 días</p>
+            </div>
+            <div class="schedule-timeline">
+                <div class="timeline-phase">
+                    <div class="phase-icon">👥</div>
+                    <div class="phase-info">
+                        <h3>Fase de Grupos</h3>
+                        <p class="phase-dates">Junio 11 - 27, 2026</p>
+                        <p class="phase-desc">48 equipos en 12 grupos, 3 partidos por equipo</p>
+                    </div>
+                </div>
+                <div class="timeline-phase">
+                    <div class="phase-icon">🎯</div>
+                    <div class="phase-info">
+                        <h3>Octavos de Final</h3>
+                        <p class="phase-dates">Junio 28 - Julio 3, 2026</p>
+                        <p class="phase-desc">16 equipos clasificados</p>
+                    </div>
+                </div>
+                <div class="timeline-phase">
+                    <div class="phase-icon">⚔️</div>
+                    <div class="phase-info">
+                        <h3>Cuartos de Final</h3>
+                        <p class="phase-dates">Julio 4 - 7, 2026</p>
+                        <p class="phase-desc">8 equipos en competencia</p>
+                    </div>
+                </div>
+                <div class="timeline-phase">
+                    <div class="phase-icon">🏅</div>
+                    <div class="phase-info">
+                        <h3>Semifinales</h3>
+                        <p class="phase-dates">Julio 9 - 11, 2026</p>
+                        <p class="phase-desc">4 equipos buscan la final</p>
+                    </div>
+                </div>
+                <div class="timeline-phase">
+                    <div class="phase-icon">🥉</div>
+                    <div class="phase-info">
+                        <h3>Tercer Lugar</h3>
+                        <p class="phase-dates">Julio 14 - 15, 2026</p>
+                        <p class="phase-desc">Partido por el tercer puesto</p>
+                    </div>
+                </div>
+                <div class="timeline-phase final">
+                    <div class="phase-icon">🏆</div>
+                    <div class="phase-info">
+                        <h3>Gran Final</h3>
+                        <p class="phase-dates">Julio 19, 2026</p>
+                        <p class="phase-desc">MetLife Stadium, Nueva York</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matches Section -->
+    <section id="matches" class="section matches">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Horario</span>
+                <h2 class="section-title">Partidos Destacados</h2>
+                <p class="section-subtitle">Los encuentros más esperados</p>
+            </div>
+            <div class="matches-grid">
+                <div class="match-card highlight">
+                    <div class="match-date">Junio 11</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-mexico"></span>
+                            <span>México</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-southafrica"></span>
+                            <span>Sudáfrica</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">Estadio Azteca, CDMX</div>
+                    <div class="match-note">Partido Inaugural</div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-date">Junio 11</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-czech"></span>
+                            <span>Rep. Checa</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-southkorea"></span>
+                            <span>Corea del Sur</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">Estadio Azteca, CDMX</div>
+                </div>
+
+                <div class="match-card highlight">
+                    <div class="match-date">Junio 12</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-canada"></span>
+                            <span>Canadá</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-bosnia"></span>
+                            <span>Bosnia</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">BMO Field, Toronto</div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-date">Junio 13</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-brazil"></span>
+                            <span>Brasil</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-haiti"></span>
+                            <span>Haití</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">SoFi Stadium, LA</div>
+                </div>
+
+                <div class="match-card highlight">
+                    <div class="match-date">Junio 14</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-argentina"></span>
+                            <span>Argentina</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-algeria"></span>
+                            <span>Argelia</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">MetLife Stadium, NY</div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-date">Junio 14</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-germany"></span>
+                            <span>Alemania</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-curacao"></span>
+                            <span>Curaçao</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">NRG Stadium, Houston</div>
+                </div>
+
+                <div class="match-card highlight">
+                    <div class="match-date">Junio 15</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-spain"></span>
+                            <span>España</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-capeverde"></span>
+                            <span>Cabo Verde</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">Levi's Stadium, SF</div>
+                </div>
+
+                <div class="match-card highlight">
+                    <div class="match-date">Junio 16</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-france"></span>
+                            <span>Francia</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-iraq"></span>
+                            <span>Irak</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">Mercedes-Benz, Atlanta</div>
+                </div>
+
+                <div class="match-card highlight">
+                    <div class="match-date">Junio 17</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-portugal"></span>
+                            <span>Portugal</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-uzbekistan"></span>
+                            <span>Uzbekistán</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">Arrowhead Stadium, KC</div>
+                </div>
+
+                <div class="match-card highlight">
+                    <div class="match-date">Junio 19</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="team-flag flag-england"></span>
+                            <span>Inglaterra</span>
+                        </div>
+                        <span class="match-vs">VS</span>
+                        <div class="match-team">
+                            <span class="team-flag flag-ghana"></span>
+                            <span>Ghana</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">Lumen Field, Seattle</div>
+                </div>
+
+                <div class="match-card highlight">
+                    <div class="match-date">Julio 19</div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <span class="trophy-mini">🏆</span>
+                            <span>Final</span>
+                        </div>
+                        <span class="match-vs">—</span>
+                        <div class="match-team">
+                            <span class="trophy-mini">🏆</span>
+                            <span>Final</span>
+                        </div>
+                    </div>
+                    <div class="match-venue">MetLife Stadium, NY</div>
+                    <div class="match-note">Gran Final</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="section stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">48</div>
+                    <div class="stat-label">Equipos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">104</div>
+                    <div class="stat-label">Partidos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">16</div>
+                    <div class="stat-label">Sedes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">39</div>
+                    <div class="stat-label">Días</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Países</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🏆</span>
+                    <span class="logo-text">FIFA World Cup 2026</span>
+                </div>
+                <div class="footer-info">
+                    <p>El primer Mundial en，三个国家联合举办</p>
+                    <p class="footer-dates">Junio 11 - Julio 19, 2026</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.fifa.com/worldcup" target="_blank">FIFA Official</a>
+                    <a href="#venues">Sedes</a>
+                    <a href="#teams">Equipos</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Hecho con ❤️ para los amantes del fútbol</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

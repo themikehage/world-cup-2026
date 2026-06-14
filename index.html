@@ -6,288 +6,240 @@
     <title>FIFA World Cup 2026 — United2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Particle Canvas -->
-    <canvas id="particles"></canvas>
-
-    <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="#" class="nav-logo" aria-label="World Cup 2026 Home">
-                <svg class="nav-trophy" viewBox="0 0 40 48" width="28" height="34">
-                    <path d="M20 2 L22 10 L30 10 L24 15 L26 23 L20 18 L14 23 L16 15 L10 10 L18 10 Z" fill="url(#goldGrad)"/>
-                    <rect x="16" y="18" width="8" height="10" fill="url(#goldGrad)"/>
-                    <rect x="14" y="28" width="12" height="3" rx="1.5" fill="url(#goldGrad)"/>
-                    <rect x="12" y="31" width="16" height="4" rx="2" fill="url(#goldGrad)"/>
-                </svg>
-                <span class="logo-text">2026</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#venues">Sedes</a></li>
-                <li><a href="#teams">Equipos</a></li>
-                <li><a href="#bracket">Fase Final</a></li>
-                <li><a href="#schedule">Calendario</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">WC 2026</a>
+            <div class="nav-links">
+                <a href="#venues">Sedes</a>
+                <a href="#teams">Equipos</a>
+                <a href="#schedule">Calendario</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-bg">
-            <div class="hero-stadium-glow"></div>
-            <div class="hero-ambient-gradient"></div>
-        </div>
-        <div class="hero-split">
-            <div class="hero-left">
-                <div class="hero-badge">
-                    <span class="badge-tricolor">
-                        <span class="badge-stripe usa"></span>
-                        <span class="badge-stripe mex"></span>
-                        <span class="badge-stripe can"></span>
-                    </span>
-                    <span class="badge-text">Jun 11 — Jul 19, 2026</span>
+    <!-- HERO – full bleed image -->
+    <section class="hero">
+        <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1762013315117-1c8005ad2b41?w=1920&q=80')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-tag">FIFA World Cup 2026</div>
+            <h1 class="hero-title">
+                <span class="hero-title-main">United</span>
+                <span class="hero-title-year">2026</span>
+            </h1>
+            <p class="hero-sub">Tres países. 48 selecciones. Un sueño.</p>
+            <div class="hero-meta">
+                <span>🇺🇸🇲🇽🇨🇦</span>
+                <span class="hero-meta-divider">·</span>
+                <span>Jun 11 — Jul 19</span>
+                <span class="hero-meta-divider">·</span>
+                <span>104 partidos</span>
+            </div>
+            <div class="hero-strip">
+                <div class="strip-item">
+                    <span class="strip-num" id="heroDays">000</span>
+                    <span class="strip-label">días</span>
                 </div>
-                <h1 class="hero-title">
-                    <span class="title-sub">FIFA</span>
-                    <span class="title-main">World Cup</span>
-                    <span class="title-number">2026</span>
-                </h1>
-                <p class="hero-byline">United<span class="byline-em">2026</span></p>
-                <p class="hero-desc">48 selecciones · 104 partidos · 3 naciones sede</p>
-                <div class="hero-cta">
-                    <a href="#teams" class="btn btn-primary">
-                        Explorar equipos
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg>
-                    </a>
-                    <a href="#bracket" class="btn btn-ghost">Ver bracket →</a>
+                <div class="strip-item">
+                    <span class="strip-num" id="heroHours">00</span>
+                    <span class="strip-label">horas</span>
+                </div>
+                <div class="strip-item">
+                    <span class="strip-num" id="heroMins">00</span>
+                    <span class="strip-label">min</span>
+                </div>
+                <div class="strip-item">
+                    <span class="strip-num" id="heroSecs">00</span>
+                    <span class="strip-label">seg</span>
                 </div>
             </div>
-            <div class="hero-right">
-                <div class="countdown" id="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="days">000</span>
-                        <span class="countdown-label">Días</span>
-                    </div>
-                    <div class="countdown-divider"></div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">00</span>
-                        <span class="countdown-label">Horas</span>
-                    </div>
-                    <div class="countdown-divider"></div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">00</span>
-                        <span class="countdown-label">Min</span>
-                    </div>
-                    <div class="countdown-divider"></div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="seconds">00</span>
-                        <span class="countdown-label">Seg</span>
-                    </div>
-                </div>
-                <div class="hero-trophy-wrap">
-                    <svg class="hero-trophy" viewBox="0 0 120 160" width="160" height="213">
-                        <defs>
-                            <linearGradient id="trophyGold" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#E8C547"/>
-                                <stop offset="50%" stop-color="#C9A84C"/>
-                                <stop offset="100%" stop-color="#A68432"/>
-                            </linearGradient>
-                            <filter id="trophyGlow">
-                                <feGaussianBlur stdDeviation="4" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                        </defs>
-                        <path class="trophy-cup" d="M28 6 C20 6 18 14 18 22 L18 40 C18 52 24 56 30 58 L60 58 C66 56 72 52 72 40 L72 22 C72 14 70 6 62 6 Z" fill="url(#trophyGold)" filter="url(#trophyGlow)"/>
-                        <path class="trophy-handle-left" d="M18 22 C2 22 2 36 18 36" stroke="url(#trophyGold)" stroke-width="4" fill="none"/>
-                        <path class="trophy-handle-right" d="M72 22 C88 22 88 36 72 36" stroke="url(#trophyGold)" stroke-width="4" fill="none"/>
-                        <ellipse class="trophy-rim" cx="45" cy="6" rx="23" ry="5" fill="url(#trophyGold)"/>
-                        <rect class="trophy-stem" x="42" y="58" width="6" height="26" rx="2" fill="url(#trophyGold)"/>
-                        <rect class="trophy-base-1" x="30" y="84" width="30" height="6" rx="3" fill="url(#trophyGold)"/>
-                        <rect class="trophy-base-2" x="25" y="90" width="40" height="8" rx="4" fill="url(#trophyGold)"/>
-                        <path class="trophy-base-3" d="M20 98 L70 98 L60 108 L30 108 Z" fill="url(#trophyGold)"/>
-                    </svg>
-                    <div class="trophy-orbs">
-                        <span class="orb usa-orb"></span>
-                        <span class="orb mex-orb"></span>
-                        <span class="orb can-orb"></span>
-                    </div>
-                </div>
+            <div class="hero-cta">
+                <a href="#teams" class="btn btn-gold">Explorar equipos →</a>
+                <a href="#venues" class="btn btn-outline">Ver sedes</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>↓</span>
+        <div class="hero-credit">
+            <span>Photo by <a href="https://unsplash.com" target="_blank">Unsplash</a></span>
+        </div>
+        <div class="hero-scroll">↓</div>
+    </section>
+
+    <!-- INTRO – editorial pull-quote section -->
+    <section class="intro section">
+        <div class="container narrow">
+            <div class="intro-grid">
+                <div class="intro-stat">
+                    <span class="intro-stat-num">48</span>
+                    <span class="intro-stat-label">equipos</span>
+                </div>
+                <div class="intro-stat">
+                    <span class="intro-stat-num">16</span>
+                    <span class="intro-stat-label">sedes</span>
+                </div>
+                <div class="intro-stat">
+                    <span class="intro-stat-num">3</span>
+                    <span class="intro-stat-label">países</span>
+                </div>
+            </div>
+            <blockquote class="intro-quote">
+                "El primer Mundial de 48 equipos. El primero en tres naciones. La edición más grande de la historia."
+            </blockquote>
+            <p class="intro-body">
+                Estados Unidos, México y Canadá se unen para albergar la 23ª edición de la Copa del Mundo. 
+                Del Estadio Azteca al MetLife, del BC Place al SoFi — 16 ciudades, 104 partidos, un campeón.
+            </p>
         </div>
     </section>
 
-    <!-- Venues Section -->
-    <section id="venues" class="section venues">
-        <div class="section-stripe"></div>
+    <!-- VENUES – city skyline backgrounds -->
+    <section id="venues" class="venues section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-eyebrow">01 · Sedes</span>
-                <h2 class="section-title">16 ciudades</h2>
-                <p class="section-subtitle">Tres países unidos por un mismo torneo</p>
-            </div>
-            <div class="venues-showcase">
-                <div class="venues-scroll" id="venuesScroll">
-                    <!-- Generated by JS -->
-                </div>
-                <div class="venues-nav">
-                    <button class="venue-nav-btn active" data-country="all">Todas</button>
-                    <button class="venue-nav-btn" data-country="usa">🇺🇸 USA <span class="count">11</span></button>
-                    <button class="venue-nav-btn" data-country="mexico">🇲🇽 México <span class="count">3</span></button>
-                    <button class="venue-nav-btn" data-country="canada">🇨🇦 Canadá <span class="count">2</span></button>
-                </div>
-            </div>
+            <div class="section-label">01 · Sedes</div>
+            <h2 class="section-title">16 ciudades</h2>
+            <p class="section-desc">De Nueva York a Vancouver, de Los Ángeles a la Ciudad de México</p>
         </div>
-    </section>
-
-    <!-- Teams Section -->
-    <section id="teams" class="section teams">
+        <div class="venues-track" id="venuesTrack">
+            <!-- JS builds -->
+        </div>
         <div class="container">
-            <div class="section-header">
-                <span class="section-eyebrow">02 · Grupos</span>
-                <h2 class="section-title">Los 48</h2>
-                <p class="section-subtitle">Doce grupos · Cuatro equipos · Un sueño</p>
-            </div>
-            <div class="groups-rail" id="groupsRail">
-                <div class="groups-scroll">
-                    <!-- Generated by JS -->
-                </div>
-                <div class="groups-controls">
-                    <button class="group-prev" aria-label="Previous groups">
-                        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                    </button>
-                    <div class="groups-dots" id="groupsDots"></div>
-                    <button class="group-next" aria-label="Next groups">
-                        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                    </button>
-                </div>
+            <div class="venues-filter" id="venuesFilter">
+                <button class="vf-btn active" data-filter="all">Todas</button>
+                <button class="vf-btn" data-filter="usa">🇺🇸 11</button>
+                <button class="vf-btn" data-filter="mexico">🇲🇽 3</button>
+                <button class="vf-btn" data-filter="canada">🇨🇦 2</button>
             </div>
         </div>
     </section>
 
-    <!-- Bracket Section -->
-    <section id="bracket" class="section bracket">
-        <div class="section-stripe"></div>
+    <!-- TEAMS – editorial grid with photos -->
+    <section id="teams" class="teams section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-eyebrow">03 · Fase final</span>
-                <h2 class="section-title">Camino al título</h2>
-                <p class="section-subtitle">48 a 1 · El que gana todo</p>
+            <div class="section-label">02 · Equipos</div>
+            <h2 class="section-title">Los 48</h2>
+            <p class="section-desc">Doce grupos. Cuatro equipos por grupo. Una oportunidad.</p>
+            <div class="teams-grid" id="teamsGrid">
+                <!-- JS builds -->
             </div>
-            <div class="bracket-flow" id="bracketFlow">
-                <!-- Generated by JS -->
+            <div class="teams-cta">
+                <button class="btn btn-ghost" id="showMoreTeams">Ver todos los grupos →</button>
             </div>
         </div>
     </section>
 
-    <!-- Schedule Section -->
-    <section id="schedule" class="section schedule">
+    <!-- FEATURED MATCH – editorial hero match -->
+    <section class="featured section">
+        <div class="featured-bg" style="background-image:url('https://images.unsplash.com/photo-1549333580-4cb2c5c8e421?w=1920&q=80')"></div>
+        <div class="featured-overlay"></div>
         <div class="container">
-            <div class="section-header">
-                <span class="section-eyebrow">04 · Calendario</span>
-                <h2 class="section-title">39 días</h2>
-                <p class="section-subtitle">La cuenta regresiva hacia la gloria</p>
-            </div>
-            <div class="schedule-rail" id="scheduleRail">
-                <!-- Generated by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section stats">
-        <div class="stats-grid" id="statsGrid">
-            <div class="stat-card">
-                <span class="stat-number" data-target="48">0</span>
-                <span class="stat-label">Equipos</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-target="104">0</span>
-                <span class="stat-label">Partidos</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-target="16">0</span>
-                <span class="stat-label">Ciudades</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-target="39">0</span>
-                <span class="stat-label">Días</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-target="3">0</span>
-                <span class="stat-label">Países</span>
+            <div class="featured-content">
+                <div class="featured-eyebrow">Partido Inaugural</div>
+                <h2 class="featured-title">México vs Sudáfrica</h2>
+                <div class="featured-meta">
+                    <span>📅 11 de junio, 2026</span>
+                    <span class="meta-dot">·</span>
+                    <span>📍 Estadio Azteca, CDMX</span>
+                </div>
+                <p class="featured-desc">
+                    El Mundial 2026 arranca en el mítico Estadio Azteca, el único estadio que ha visto dos finales del Mundial. 
+                    México, anfitrión por tercera vez, recibe a Sudáfrica en el partido inaugural.
+                </p>
+                <div class="featured-stats">
+                    <div class="f-stat"><span class="f-num">80,824</span><span class="f-label">espectadores</span></div>
+                    <div class="f-stat"><span class="f-num">3</span><span class="f-label">mundiales en Azteca</span></div>
+                    <div class="f-stat"><span class="f-num">1970</span><span class="f-label">primer Mundial en México</span></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- SCHEDULE -->
+    <section id="schedule" class="schedule section">
+        <div class="container">
+            <div class="section-label">03 · Calendario</div>
+            <h2 class="section-title">El camino</h2>
+            <p class="section-desc">39 días · 6 fases · un campeón</p>
+            <div class="schedule-list" id="scheduleList">
+                <!-- JS builds -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL COUNTDOWN -->
+    <section class="final-countdown section">
+        <div class="container narrow">
+            <div class="fc-header">
+                <span class="fc-icon">🏆</span>
+                <h2 class="fc-title">La gran final</h2>
+                <p class="fc-sub">MetLife Stadium · East Rutherford, NJ · 19 de julio, 2026</p>
+            </div>
+            <div class="fc-track" id="fcTrack">
+                <div class="fc-item">
+                    <span class="fc-num" id="fcDays">000</span>
+                    <span class="fc-label">días</span>
+                </div>
+                <div class="fc-item">
+                    <span class="fc-num" id="fcHours">00</span>
+                    <span class="fc-label">horas</span>
+                </div>
+                <div class="fc-item">
+                    <span class="fc-num" id="fcMins">00</span>
+                    <span class="fc-label">min</span>
+                </div>
+                <div class="fc-item">
+                    <span class="fc-num" id="fcSecs">00</span>
+                    <span class="fc-label">seg</span>
+                </div>
+            </div>
+            <div class="fc-stadium-img" style="background-image:url('https://images.unsplash.com/photo-1592841897894-108b4aa4f076?w=1200&q=80')"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <svg viewBox="0 0 40 48" width="24" height="29">
-                        <path d="M20 2 L22 10 L30 10 L24 15 L26 23 L20 18 L14 23 L16 15 L10 10 L18 10 Z" fill="#C9A84C"/>
-                        <rect x="16" y="18" width="8" height="10" fill="#C9A84C"/>
-                        <rect x="14" y="28" width="12" height="3" rx="1.5" fill="#C9A84C"/>
-                        <rect x="12" y="31" width="16" height="4" rx="2" fill="#C9A84C"/>
-                    </svg>
-                    <span class="footer-title">World Cup 2026</span>
+                    <span class="footer-logo">WC 2026</span>
+                    <span class="footer-tagline">United2026</span>
                 </div>
-                <div class="footer-tricolor">
-                    <span class="tri-stripe usa"></span>
-                    <span class="tri-stripe mex"></span>
-                    <span class="tri-stripe can"></span>
-                </div>
-                <div class="footer-info">
-                    <p>United<span class="byline-em">2026</span> · El primer Mundial en tres continentes</p>
+                <div class="footer-meta">
+                    <p>FIFA World Cup 2026 · Estados Unidos · México · Canadá</p>
                     <p class="footer-small">Junio 11 — Julio 19, 2026</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.fifa.com" target="_blank" rel="noopener">FIFA.org</a>
-                    <a href="#venues">Sedes</a>
+                    <a href="https://www.fifa.com" target="_blank" rel="noopener">FIFA</a>
                     <a href="#teams">Equipos</a>
-                    <a href="#schedule">Calendario</a>
+                    <a href="#venues">Sedes</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Diseñado para los amantes del fútbol</p>
+                <p>Hecho para los amantes del fútbol</p>
             </div>
         </div>
     </footer>
 
-    <!-- Player Modal -->
-    <div class="modal" id="playerModal" role="dialog" aria-modal="true">
-        <div class="modal-backdrop"></div>
-        <div class="modal-panel">
-            <button class="modal-close" aria-label="Close">
-                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-            </button>
+    <!-- MODAL -->
+    <div class="modal" id="playerModal">
+        <div class="modal-bg"></div>
+        <div class="modal-card">
+            <button class="modal-x" aria-label="Cerrar">✕</button>
             <div class="modal-body">
-                <div class="player-portrait" id="playerFlag"></div>
-                <h3 class="player-name" id="playerName"></h3>
-                <p class="player-team" id="playerTeam"></p>
-                <div class="player-divider"></div>
-                <div class="player-details">
-                    <div class="detail"><span class="detail-label">Posición</span><span class="detail-value" id="playerPosition"></span></div>
-                    <div class="detail"><span class="detail-label">Club</span><span class="detail-value" id="playerClub"></span></div>
+                <div class="modal-flag" id="modalFlag"></div>
+                <h3 class="modal-name" id="modalName"></h3>
+                <p class="modal-team" id="modalTeam"></p>
+                <div class="modal-details">
+                    <div class="md"><span class="md-lbl">Posición</span><span class="md-val" id="modalPos"></span></div>
+                    <div class="md"><span class="md-lbl">Club</span><span class="md-val" id="modalClub"></span></div>
                 </div>
-                <div class="player-numbers">
-                    <div class="num">
-                        <span class="num-value" id="playerCaps">0</span>
-                        <span class="num-label">Partidos</span>
-                    </div>
-                    <div class="num">
-                        <span class="num-value" id="playerGoals">0</span>
-                        <span class="num-label">Goles</span>
-                    </div>
+                <div class="modal-stats-row">
+                    <div class="ms"><span class="ms-num" id="modalCaps">0</span><span class="ms-lbl">Partidos</span></div>
+                    <div class="ms"><span class="ms-num" id="modalGoals">0</span><span class="ms-lbl">Goles</span></div>
                 </div>
             </div>
         </div>

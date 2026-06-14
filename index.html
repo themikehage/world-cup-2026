@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIFA World Cup 2026 - United2026</title>
+    <title>FIFA World Cup 2026 — United2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,28 +14,25 @@
     <canvas id="particles"></canvas>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <svg class="trophy-nav" viewBox="0 0 40 50">
-                    <path d="M20 2 L22 10 L30 10 L24 15 L26 23 L20 18 L14 23 L16 15 L10 10 L18 10 Z" fill="#D4AF37"/>
-                    <rect x="16" y="18" width="8" height="12" fill="#D4AF37"/>
-                    <rect x="14" y="30" width="12" height="4" rx="1" fill="#D4AF37"/>
-                    <rect x="12" y="34" width="16" height="5" rx="2" fill="#D4AF37"/>
+            <a href="#" class="nav-logo" aria-label="World Cup 2026 Home">
+                <svg class="nav-trophy" viewBox="0 0 40 48" width="28" height="34">
+                    <path d="M20 2 L22 10 L30 10 L24 15 L26 23 L20 18 L14 23 L16 15 L10 10 L18 10 Z" fill="url(#goldGrad)"/>
+                    <rect x="16" y="18" width="8" height="10" fill="url(#goldGrad)"/>
+                    <rect x="14" y="28" width="12" height="3" rx="1.5" fill="url(#goldGrad)"/>
+                    <rect x="12" y="31" width="16" height="4" rx="2" fill="url(#goldGrad)"/>
                 </svg>
-                <span class="logo-text">WC 2026</span>
+                <span class="logo-text">2026</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#hero" class="nav-active">Inicio</a></li>
                 <li><a href="#venues">Sedes</a></li>
                 <li><a href="#teams">Equipos</a></li>
                 <li><a href="#bracket">Fase Final</a></li>
                 <li><a href="#schedule">Calendario</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
@@ -43,73 +40,84 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-radial"></div>
+            <div class="hero-stadium-glow"></div>
+            <div class="hero-ambient-gradient"></div>
         </div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Junio 11 - Julio 19, 2026
-            </div>
-            <div class="hero-trophy-container">
-                <svg class="hero-trophy" viewBox="0 0 100 140">
-                    <defs>
-                        <linearGradient id="trophyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FFD700"/>
-                            <stop offset="50%" style="stop-color:#D4AF37"/>
-                            <stop offset="100%" style="stop-color:#B8860B"/>
-                        </linearGradient>
-                        <filter id="glow">
-                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                            <feMerge>
-                                <feMergeNode in="coloredBlur"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                    </defs>
-                    <path class="trophy-base" d="M35 45 L40 40 L60 40 L65 45 L60 50 L40 50 Z" fill="url(#trophyGrad)"/>
-                    <path class="trophy-cup" d="M25 5 Q20 5 20 15 L20 35 Q20 45 30 45 L70 45 Q80 45 80 35 L80 15 Q80 5 75 5 Z" fill="url(#trophyGrad)" filter="url(#glow)"/>
-                    <path class="trophy-handle-left" d="M20 15 Q5 15 5 25 Q5 35 20 35" stroke="url(#trophyGrad)" stroke-width="4" fill="none"/>
-                    <path class="trophy-handle-right" d="M80 15 Q95 15 95 25 Q95 35 80 35" stroke="url(#trophyGrad)" stroke-width="4" fill="none"/>
-                    <rect class="trophy-stem" x="42" y="45" width="16" height="25" fill="url(#trophyGrad)"/>
-                    <rect class="trophy-foot" x="35" y="70" width="30" height="8" rx="2" fill="url(#trophyGrad)"/>
-                    <rect class="trophy-base-plate" x="30" y="78" width="40" height="12" rx="3" fill="url(#trophyGrad)"/>
-                    <ellipse class="trophy-top" cx="50" cy="8" rx="20" ry="5" fill="url(#trophyGrad)"/>
-                </svg>
-                <div class="trophy-glow"></div>
-            </div>
-            <h1 class="hero-title">
-                <span class="title-fifa">FIFA</span>
-                <span class="title-world">WORLD CUP</span>
-                <span class="title-year">2026</span>
-            </h1>
-            <p class="hero-subtitle">
-                <em>United2026</em> — El primer Mundial con tres naciones sede
-            </p>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="days">000</span>
-                    <span class="countdown-label">Días</span>
+        <div class="hero-split">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="badge-tricolor">
+                        <span class="badge-stripe usa"></span>
+                        <span class="badge-stripe mex"></span>
+                        <span class="badge-stripe can"></span>
+                    </span>
+                    <span class="badge-text">Jun 11 — Jul 19, 2026</span>
                 </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">00</span>
-                    <span class="countdown-label">Horas</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">00</span>
-                    <span class="countdown-label">Minutos</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">00</span>
-                    <span class="countdown-label">Segundos</span>
+                <h1 class="hero-title">
+                    <span class="title-sub">FIFA</span>
+                    <span class="title-main">World Cup</span>
+                    <span class="title-number">2026</span>
+                </h1>
+                <p class="hero-byline">United<span class="byline-em">2026</span></p>
+                <p class="hero-desc">48 selecciones · 104 partidos · 3 naciones sede</p>
+                <div class="hero-cta">
+                    <a href="#teams" class="btn btn-primary">
+                        Explorar equipos
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                    <a href="#bracket" class="btn btn-ghost">Ver bracket →</a>
                 </div>
             </div>
-            <div class="hero-cta">
-                <a href="#teams" class="btn btn-primary">
-                    <span>Ver Equipos</span>
-                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                </a>
-                <a href="#bracket" class="btn btn-secondary">Ver Fase Final</a>
+            <div class="hero-right">
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">000</span>
+                        <span class="countdown-label">Días</span>
+                    </div>
+                    <div class="countdown-divider"></div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-divider"></div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Min</span>
+                    </div>
+                    <div class="countdown-divider"></div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seg</span>
+                    </div>
+                </div>
+                <div class="hero-trophy-wrap">
+                    <svg class="hero-trophy" viewBox="0 0 120 160" width="160" height="213">
+                        <defs>
+                            <linearGradient id="trophyGold" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#E8C547"/>
+                                <stop offset="50%" stop-color="#C9A84C"/>
+                                <stop offset="100%" stop-color="#A68432"/>
+                            </linearGradient>
+                            <filter id="trophyGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+                        <path class="trophy-cup" d="M28 6 C20 6 18 14 18 22 L18 40 C18 52 24 56 30 58 L60 58 C66 56 72 52 72 40 L72 22 C72 14 70 6 62 6 Z" fill="url(#trophyGold)" filter="url(#trophyGlow)"/>
+                        <path class="trophy-handle-left" d="M18 22 C2 22 2 36 18 36" stroke="url(#trophyGold)" stroke-width="4" fill="none"/>
+                        <path class="trophy-handle-right" d="M72 22 C88 22 88 36 72 36" stroke="url(#trophyGold)" stroke-width="4" fill="none"/>
+                        <ellipse class="trophy-rim" cx="45" cy="6" rx="23" ry="5" fill="url(#trophyGold)"/>
+                        <rect class="trophy-stem" x="42" y="58" width="6" height="26" rx="2" fill="url(#trophyGold)"/>
+                        <rect class="trophy-base-1" x="30" y="84" width="30" height="6" rx="3" fill="url(#trophyGold)"/>
+                        <rect class="trophy-base-2" x="25" y="90" width="40" height="8" rx="4" fill="url(#trophyGold)"/>
+                        <path class="trophy-base-3" d="M20 98 L70 98 L60 108 L30 108 Z" fill="url(#trophyGold)"/>
+                    </svg>
+                    <div class="trophy-orbs">
+                        <span class="orb usa-orb"></span>
+                        <span class="orb mex-orb"></span>
+                        <span class="orb can-orb"></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -119,98 +127,22 @@
 
     <!-- Venues Section -->
     <section id="venues" class="section venues">
+        <div class="section-stripe"></div>
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">16 Ciudades</span>
-                <h2 class="section-title">Sedes del Mundial</h2>
-                <p class="section-subtitle">Tres países, un torneo histórico</p>
+                <span class="section-eyebrow">01 · Sedes</span>
+                <h2 class="section-title">16 ciudades</h2>
+                <p class="section-subtitle">Tres países unidos por un mismo torneo</p>
             </div>
-            <div class="venues-map">
-                <div class="map-container">
-                    <div class="map-svg-container">
-                        <svg class="map-svg" viewBox="0 0 1000 600">
-                            <!-- Simplified North America outline -->
-                            <path class="map-land" d="M150 200 L200 180 L300 150 L400 140 L500 150 L600 140 L700 160 L750 200 L800 250 L850 300 L800 350 L750 400 L700 450 L600 500 L500 520 L400 510 L300 500 L200 480 L150 420 L100 350 L80 280 L100 230 Z"/>
-                            <!-- Country labels -->
-                            <text class="map-label" x="650" y="350">USA</text>
-                            <text class="map-label" x="380" y="420">MÉxico</text>
-                            <text class="map-label" x="220" y="350">Canadá</text>
-                            <!-- City dots -->
-                            <circle class="map-dot" data-city="newyork" cx="820" cy="220" r="8"/>
-                            <circle class="map-dot" data-city="dallas" cx="580" cy="320" r="8"/>
-                            <circle class="map-dot" data-city="la" cx="120" cy="300" r="8"/>
-                            <circle class="map-dot" data-city="kansascity" cx="520" cy="280" r="8"/>
-                            <circle class="map-dot" data-city="sf" cx="100" cy="260" r="8"/>
-                            <circle class="map-dot" data-city="houston" cx="560" cy="360" r="8"/>
-                            <circle class="map-dot" data-city="philadelphia" cx="800" cy="240" r="8"/>
-                            <circle class="map-dot" data-city="atlanta" cx="700" cy="340" r="8"/>
-                            <circle class="map-dot" data-city="seattle" cx="80" cy="200" r="8"/>
-                            <circle class="map-dot" data-city="miami" cx="750" cy="400" r="8"/>
-                            <circle class="map-dot" data-city="boston" cx="850" cy="200" r="8"/>
-                            <circle class="map-dot" data-city="mexico" cx="400" cy="380" r="8"/>
-                            <circle class="map-dot" data-city="monterrey" cx="420" cy="340" r="8"/>
-                            <circle class="map-dot" data-city="guadalajara" cx="380" cy="420" r="8"/>
-                            <circle class="map-dot" data-city="vancouver" cx="100" cy="150" r="8"/>
-                            <circle class="map-dot" data-city="toronto" cx="250" cy="200" r="8"/>
-                        </svg>
-                    </div>
-                    <div class="map-tooltip" id="mapTooltip">
-                        <div class="tooltip-content">
-                            <h4 id="tooltipCity">Ciudad</h4>
-                            <p id="tooltipStadium">Estadio</p>
-                            <p id="tooltipCapacity">Capacidad</p>
-                        </div>
-                    </div>
+            <div class="venues-showcase">
+                <div class="venues-scroll" id="venuesScroll">
+                    <!-- Generated by JS -->
                 </div>
-                <div class="venues-grid">
-                    <div class="venue-card" data-city="newyork">
-                        <div class="venue-flag usa"></div>
-                        <div class="venue-info">
-                            <h3>New York / New Jersey</h3>
-                            <p class="venue-stadium">MetLife Stadium</p>
-                            <p class="venue-capacity">80,663</p>
-                        </div>
-                    </div>
-                    <div class="venue-card" data-city="dallas">
-                        <div class="venue-flag usa"></div>
-                        <div class="venue-info">
-                            <h3>Dallas</h3>
-                            <p class="venue-stadium">AT&T Stadium</p>
-                            <p class="venue-capacity">70,649</p>
-                        </div>
-                    </div>
-                    <div class="venue-card" data-city="la">
-                        <div class="venue-flag usa"></div>
-                        <div class="venue-info">
-                            <h3>Los Angeles</h3>
-                            <p class="venue-stadium">SoFi Stadium</p>
-                            <p class="venue-capacity">70,492</p>
-                        </div>
-                    </div>
-                    <div class="venue-card" data-city="mexico">
-                        <div class="venue-flag mexico"></div>
-                        <div class="venue-info">
-                            <h3>Ciudad de México</h3>
-                            <p class="venue-stadium">Estadio Azteca</p>
-                            <p class="venue-capacity">80,824</p>
-                        </div>
-                    </div>
-                    <div class="venue-card" data-city="houston">
-                        <div class="venue-flag usa"></div>
-                        <div class="venue-info">
-                            <h3>Houston</h3>
-                            <p class="venue-stadium">NRG Stadium</p>
-                            <p class="venue-capacity">68,777</p>
-                        </div>
-                    </div>
-                    <div class="venue-card" data-city="vancouver">
-                        <div class="venue-flag canada"></div>
-                        <div class="venue-info">
-                            <h3>Vancouver</h3>
-                            <p class="venue-stadium">BC Place</p>
-                            <p class="venue-capacity">52,497</p>
-                        </div>
-                    </div>
+                <div class="venues-nav">
+                    <button class="venue-nav-btn active" data-country="all">Todas</button>
+                    <button class="venue-nav-btn" data-country="usa">🇺🇸 USA <span class="count">11</span></button>
+                    <button class="venue-nav-btn" data-country="mexico">🇲🇽 México <span class="count">3</span></button>
+                    <button class="venue-nav-btn" data-country="canada">🇨🇦 Canadá <span class="count">2</span></button>
                 </div>
             </div>
         </div>
@@ -220,396 +152,22 @@
     <section id="teams" class="section teams">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">48 Equipos</span>
-                <h2 class="section-title">Equipos Participantes</h2>
-                <p class="section-subtitle">12 grupos • Las mejores selecciones del mundo</p>
+                <span class="section-eyebrow">02 · Grupos</span>
+                <h2 class="section-title">Los 48</h2>
+                <p class="section-subtitle">Doce grupos · Cuatro equipos · Un sueño</p>
             </div>
-            <div class="groups-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="a">Grupo A</button>
-                <button class="filter-btn" data-filter="b">Grupo B</button>
-                <button class="filter-btn" data-filter="c">Grupo C</button>
-                <button class="filter-btn" data-filter="d">Grupo D</button>
-                <button class="filter-btn" data-filter="e">Grupo E</button>
-                <button class="filter-btn" data-filter="f">Grupo F</button>
-                <button class="filter-btn" data-filter="g">Grupo G</button>
-                <button class="filter-btn" data-filter="h">Grupo H</button>
-                <button class="filter-btn" data-filter="i">Grupo I</button>
-                <button class="filter-btn" data-filter="j">Grupo J</button>
-                <button class="filter-btn" data-filter="k">Grupo K</button>
-                <button class="filter-btn" data-filter="l">Grupo L</button>
-            </div>
-            <div class="groups-container" id="groupsContainer">
-                <!-- Group A -->
-                <div class="group-card" data-group="a">
-                    <div class="group-header">
-                        <span class="group-letter">A</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="mexico" data-player="raul-jimenez">
-                            <span class="team-flag flag-mexico"></span>
-                            <span class="team-name">México</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="southafrica" data-player="lyle-foster">
-                            <span class="team-flag flag-southafrica"></span>
-                            <span class="team-name">Sudáfrica</span>
-                        </div>
-                        <div class="team-row" data-team="southkorea" data-player="son-heungmin">
-                            <span class="team-flag flag-southkorea"></span>
-                            <span class="team-name">Corea del Sur</span>
-                        </div>
-                        <div class="team-row" data-team="czech" data-player="patrik-schick">
-                            <span class="team-flag flag-czech"></span>
-                            <span class="team-name">República Checa</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="son-heungmin">Son Heung-min</span>
-                    </div>
+            <div class="groups-rail" id="groupsRail">
+                <div class="groups-scroll">
+                    <!-- Generated by JS -->
                 </div>
-
-                <!-- Group B -->
-                <div class="group-card" data-group="b">
-                    <div class="group-header">
-                        <span class="group-letter">B</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="switzerland" data-player="granit-xhaka">
-                            <span class="team-flag flag-switzerland"></span>
-                            <span class="team-name">Suiza</span>
-                        </div>
-                        <div class="team-row" data-team="canada" data-player="alphonso-davies">
-                            <span class="team-flag flag-canada"></span>
-                            <span class="team-name">Canadá</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="qatar" data-player="hassan-alhaydos">
-                            <span class="team-flag flag-qatar"></span>
-                            <span class="team-name">Catar</span>
-                        </div>
-                        <div class="team-row" data-team="bosnia" data-player="edin-dzeko">
-                            <span class="team-flag flag-bosnia"></span>
-                            <span class="team-name">Bosnia y Herzegovina</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="alphonso-davies">Alphonso Davies</span>
-                    </div>
-                </div>
-
-                <!-- Group C -->
-                <div class="group-card" data-group="c">
-                    <div class="group-header">
-                        <span class="group-letter">C</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="brazil" data-player="vinicius-jr">
-                            <span class="team-flag flag-brazil"></span>
-                            <span class="team-name">Brasil</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="haiti" data-player="frantzdy-pierrot">
-                            <span class="team-flag flag-haiti"></span>
-                            <span class="team-name">Haití</span>
-                        </div>
-                        <div class="team-row" data-team="morocco" data-player="achraf-hakimi">
-                            <span class="team-flag flag-morocco"></span>
-                            <span class="team-name">Marruecos</span>
-                        </div>
-                        <div class="team-row" data-team="scotland" data-player="andy-robertson">
-                            <span class="team-flag flag-scotland"></span>
-                            <span class="team-name">Escocia</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="vinicius-jr">Vinícius Jr.</span>
-                    </div>
-                </div>
-
-                <!-- Group D -->
-                <div class="group-card" data-group="d">
-                    <div class="group-header">
-                        <span class="group-letter">D</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="australia" data-player="mathew-leckie">
-                            <span class="team-flag flag-australia"></span>
-                            <span class="team-name">Australia</span>
-                        </div>
-                        <div class="team-row" data-team="paraguay" data-player="miguel-almiron">
-                            <span class="team-flag flag-paraguay"></span>
-                            <span class="team-name">Paraguay</span>
-                        </div>
-                        <div class="team-row" data-team="turkey" data-player="hakan-calhanoglu">
-                            <span class="team-flag flag-turkey"></span>
-                            <span class="team-name">Turquía</span>
-                        </div>
-                        <div class="team-row" data-team="usa" data-player="christian-pulisic">
-                            <span class="team-flag flag-usa"></span>
-                            <span class="team-name">Estados Unidos</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="christian-pulisic">Christian Pulisic</span>
-                    </div>
-                </div>
-
-                <!-- Group E -->
-                <div class="group-card" data-group="e">
-                    <div class="group-header">
-                        <span class="group-letter">E</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="curacao" data-player="leandro-bacuna">
-                            <span class="team-flag flag-curacao"></span>
-                            <span class="team-name">Curaçao</span>
-                        </div>
-                        <div class="team-row" data-team="ecuador" data-player="enner-valencia">
-                            <span class="team-flag flag-ecuador"></span>
-                            <span class="team-name">Ecuador</span>
-                        </div>
-                        <div class="team-row" data-team="germany" data-player="jamal-musiala">
-                            <span class="team-flag flag-germany"></span>
-                            <span class="team-name">Alemania</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="ivorycoast" data-player="frank-kessie">
-                            <span class="team-flag flag-ivorycoast"></span>
-                            <span class="team-name">Costa de Marfil</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="jamal-musiala">Jamal Musiala</span>
-                    </div>
-                </div>
-
-                <!-- Group F -->
-                <div class="group-card" data-group="f">
-                    <div class="group-header">
-                        <span class="group-letter">F</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="japan" data-player="takefusa-kubo">
-                            <span class="team-flag flag-japan"></span>
-                            <span class="team-name">Japón</span>
-                        </div>
-                        <div class="team-row" data-team="netherlands" data-player="virgil-vandijk">
-                            <span class="team-flag flag-netherlands"></span>
-                            <span class="team-name">Países Bajos</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="sweden" data-player="alexander-isak">
-                            <span class="team-flag flag-sweden"></span>
-                            <span class="team-name">Suecia</span>
-                        </div>
-                        <div class="team-row" data-team="tunisia" data-player="ellyes-skhir">
-                            <span class="team-flag flag-tunisia"></span>
-                            <span class="team-name">Túnez</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="virgil-vandijk">Virgil van Dijk</span>
-                    </div>
-                </div>
-
-                <!-- Group G -->
-                <div class="group-card" data-group="g">
-                    <div class="group-header">
-                        <span class="group-letter">G</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="belgium" data-player="kevin-debruyne">
-                            <span class="team-flag flag-belgium"></span>
-                            <span class="team-name">Bélgica</span>
-                        </div>
-                        <div class="team-row" data-team="egypt" data-player="mohamed-salah">
-                            <span class="team-flag flag-egypt"></span>
-                            <span class="team-name">Egipto</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="iran" data-player="mehdi-taremi">
-                            <span class="team-flag flag-iran"></span>
-                            <span class="team-name">Irán</span>
-                        </div>
-                        <div class="team-row" data-team="newzealand" data-player="chris-wood">
-                            <span class="team-flag flag-newzealand"></span>
-                            <span class="team-name">Nueva Zelanda</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="mohamed-salah">Mohamed Salah</span>
-                    </div>
-                </div>
-
-                <!-- Group H -->
-                <div class="group-card" data-group="h">
-                    <div class="group-header">
-                        <span class="group-letter">H</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="capeverde" data-player="ryan-mendes">
-                            <span class="team-flag flag-capeverde"></span>
-                            <span class="team-name">Cabo Verde</span>
-                        </div>
-                        <div class="team-row" data-team="saudiarabia" data-player="salem-aldawsari">
-                            <span class="team-flag flag-saudiarabia"></span>
-                            <span class="team-name">Arabia Saudita</span>
-                        </div>
-                        <div class="team-row" data-team="spain" data-player="lamine-yamal">
-                            <span class="team-flag flag-spain"></span>
-                            <span class="team-name">España</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="uruguay" data-player="darwin-nunez">
-                            <span class="team-flag flag-uruguay"></span>
-                            <span class="team-name">Uruguay</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="lamine-yamal">Lamine Yamal</span>
-                    </div>
-                </div>
-
-                <!-- Group I -->
-                <div class="group-card" data-group="i">
-                    <div class="group-header">
-                        <span class="group-letter">I</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="france" data-player="kylian-mbappe">
-                            <span class="team-flag flag-france"></span>
-                            <span class="team-name">Francia</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="iraq" data-player="mohanad-ali">
-                            <span class="team-flag flag-iraq"></span>
-                            <span class="team-name">Irak</span>
-                        </div>
-                        <div class="team-row" data-team="norway" data-player="erling-haaland">
-                            <span class="team-flag flag-norway"></span>
-                            <span class="team-name">Noruega</span>
-                        </div>
-                        <div class="team-row" data-team="senegal" data-player="sadio-mane">
-                            <span class="team-flag flag-senegal"></span>
-                            <span class="team-name">Senegal</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="kylian-mbappe">Kylian Mbappé</span>
-                    </div>
-                </div>
-
-                <!-- Group J -->
-                <div class="group-card" data-group="j">
-                    <div class="group-header">
-                        <span class="group-letter">J</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="algeria" data-player="riyad-mahrez">
-                            <span class="team-flag flag-algeria"></span>
-                            <span class="team-name">Argelia</span>
-                        </div>
-                        <div class="team-row" data-team="argentina" data-player="lionel-messi">
-                            <span class="team-flag flag-argentina"></span>
-                            <span class="team-name">Argentina</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="austria" data-player="david-alaba">
-                            <span class="team-flag flag-austria"></span>
-                            <span class="team-name">Austria</span>
-                        </div>
-                        <div class="team-row" data-team="jordan" data-player="musa-eltaamari">
-                            <span class="team-flag flag-jordan"></span>
-                            <span class="team-name">Jordania</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="lionel-messi">Lionel Messi</span>
-                    </div>
-                </div>
-
-                <!-- Group K -->
-                <div class="group-card" data-group="k">
-                    <div class="group-header">
-                        <span class="group-letter">K</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="colombia" data-player="james-rodriguez">
-                            <span class="team-flag flag-colombia"></span>
-                            <span class="team-name">Colombia</span>
-                        </div>
-                        <div class="team-row" data-team="drcongo" data-player="chancel-mbemba">
-                            <span class="team-flag flag-drcongo"></span>
-                            <span class="team-name">RD Congo</span>
-                        </div>
-                        <div class="team-row" data-team="portugal" data-player="cristiano-ronaldo">
-                            <span class="team-flag flag-portugal"></span>
-                            <span class="team-name">Portugal</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="uzbekistan" data-player="eldor-shomurodov">
-                            <span class="team-flag flag-uzbekistan"></span>
-                            <span class="team-name">Uzbekistán</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="cristiano-ronaldo">Cristiano Ronaldo</span>
-                    </div>
-                </div>
-
-                <!-- Group L -->
-                <div class="group-card" data-group="l">
-                    <div class="group-header">
-                        <span class="group-letter">L</span>
-                        <div class="group-teams-count">4 equipos</div>
-                    </div>
-                    <div class="group-teams">
-                        <div class="team-row" data-team="croatia" data-player="luka-modric">
-                            <span class="team-flag flag-croatia"></span>
-                            <span class="team-name">Croacia</span>
-                        </div>
-                        <div class="team-row" data-team="england" data-player="harry-kane">
-                            <span class="team-flag flag-england"></span>
-                            <span class="team-name">Inglaterra</span>
-                            <span class="team-star">⭐</span>
-                        </div>
-                        <div class="team-row" data-team="ghana" data-player="jordan-ayew">
-                            <span class="team-flag flag-ghana"></span>
-                            <span class="team-name">Ghana</span>
-                        </div>
-                        <div class="team-row" data-team="panama" data-player="anibal-godoy">
-                            <span class="team-flag flag-panama"></span>
-                            <span class="team-name">Panamá</span>
-                        </div>
-                    </div>
-                    <div class="group-star">
-                        <span class="star-label">⭐ Estrella:</span>
-                        <span class="star-player" data-player="harry-kane">Harry Kane</span>
-                    </div>
+                <div class="groups-controls">
+                    <button class="group-prev" aria-label="Previous groups">
+                        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    </button>
+                    <div class="groups-dots" id="groupsDots"></div>
+                    <button class="group-next" aria-label="Next groups">
+                        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -617,96 +175,15 @@
 
     <!-- Bracket Section -->
     <section id="bracket" class="section bracket">
+        <div class="section-stripe"></div>
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Fase Final</span>
-                <h2 class="section-title">Camino al Título</h2>
-                <p class="section-subtitle">De 48 equipos a 1 campeón</p>
+                <span class="section-eyebrow">03 · Fase final</span>
+                <h2 class="section-title">Camino al título</h2>
+                <p class="section-subtitle">48 a 1 · El que gana todo</p>
             </div>
-            <div class="bracket-container">
-                <div class="bracket-round round16">
-                    <h4 class="round-title">Octavos de Final</h4>
-                    <div class="round-matches">
-                        <div class="bracket-match">
-                            <span class="match-team">1A vs 2B</span>
-                            <span class="match-team">1C vs 2D</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">1E vs 2F</span>
-                            <span class="match-team">1G vs 2H</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">1I vs 2J</span>
-                            <span class="match-team">1K vs 2L</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">1D vs 2A</span>
-                            <span class="match-team">1B vs 2C</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">1F vs 2E</span>
-                            <span class="match-team">1H vs 2G</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">1J vs 2I</span>
-                            <span class="match-team">1L vs 2K</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">1vs 2</span>
-                            <span class="match-team">1vs 2</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">1vs 2</span>
-                            <span class="match-team">1vs 2</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bracket-round quarter">
-                    <h4 class="round-title">Cuartos</h4>
-                    <div class="round-matches">
-                        <div class="bracket-match">
-                            <span class="match-team">Ganador 1</span>
-                            <span class="match-team">Ganador 2</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">Ganador 3</span>
-                            <span class="match-team">Ganador 4</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">Ganador 5</span>
-                            <span class="match-team">Ganador 6</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">Ganador 7</span>
-                            <span class="match-team">Ganador 8</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bracket-round semi">
-                    <h4 class="round-title">Semifinales</h4>
-                    <div class="round-matches">
-                        <div class="bracket-match">
-                            <span class="match-team">Ganador Q1</span>
-                            <span class="match-team">Ganador Q2</span>
-                        </div>
-                        <div class="bracket-match">
-                            <span class="match-team">Ganador Q3</span>
-                            <span class="match-team">Ganador Q4</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bracket-round final">
-                    <h4 class="round-title">Gran Final</h4>
-                    <div class="round-matches">
-                        <div class="bracket-match final-match">
-                            <span class="match-team trophy">🏆</span>
-                            <span class="match-team">Ganador S1</span>
-                            <span class="match-team">Ganador S2</span>
-                            <span class="match-team trophy">🏆</span>
-                        </div>
-                    </div>
-                    <div class="final-venue">Julio 19 • MetLife Stadium, NY</div>
-                </div>
+            <div class="bracket-flow" id="bracketFlow">
+                <!-- Generated by JS -->
             </div>
         </div>
     </section>
@@ -715,93 +192,38 @@
     <section id="schedule" class="section schedule">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">39 Días</span>
-                <h2 class="section-title">Calendario del Torneo</h2>
-                <p class="section-subtitle">104 partidos en tres países</p>
+                <span class="section-eyebrow">04 · Calendario</span>
+                <h2 class="section-title">39 días</h2>
+                <p class="section-subtitle">La cuenta regresiva hacia la gloria</p>
             </div>
-            <div class="schedule-timeline">
-                <div class="timeline-phase" data-phase="groups">
-                    <div class="phase-marker">01</div>
-                    <div class="phase-info">
-                        <h3>Fase de Grupos</h3>
-                        <p class="phase-dates">Junio 11 - 27</p>
-                        <p class="phase-desc">48 equipos en 12 grupos, 3 jornadas</p>
-                    </div>
-                    <div class="phase-progress"><div class="progress-bar"></div></div>
-                </div>
-                <div class="timeline-phase" data-phase="round16">
-                    <div class="phase-marker">02</div>
-                    <div class="phase-info">
-                        <h3>Octavos de Final</h3>
-                        <p class="phase-dates">Junio 28 - Julio 3</p>
-                        <p class="phase-desc">16 equipos clasificados</p>
-                    </div>
-                    <div class="phase-progress"><div class="progress-bar"></div></div>
-                </div>
-                <div class="timeline-phase" data-phase="quarter">
-                    <div class="phase-marker">03</div>
-                    <div class="phase-info">
-                        <h3>Cuartos de Final</h3>
-                        <p class="phase-dates">Julio 4 - 7</p>
-                        <p class="phase-desc">8 equipos en competencia</p>
-                    </div>
-                    <div class="phase-progress"><div class="progress-bar"></div></div>
-                </div>
-                <div class="timeline-phase" data-phase="semi">
-                    <div class="phase-marker">04</div>
-                    <div class="phase-info">
-                        <h3>Semifinales</h3>
-                        <p class="phase-dates">Julio 9 - 11</p>
-                        <p class="phase-desc">4 equipos buscan la final</p>
-                    </div>
-                    <div class="phase-progress"><div class="progress-bar"></div></div>
-                </div>
-                <div class="timeline-phase" data-phase="third">
-                    <div class="phase-marker">05</div>
-                    <div class="phase-info">
-                        <h3>Tercer Lugar</h3>
-                        <p class="phase-dates">Julio 14 - 15</p>
-                        <p class="phase-desc">Partido por el bronce</p>
-                    </div>
-                    <div class="phase-progress"><div class="progress-bar"></div></div>
-                </div>
-                <div class="timeline-phase final" data-phase="final">
-                    <div class="phase-marker">🏆</div>
-                    <div class="phase-info">
-                        <h3>Gran Final</h3>
-                        <p class="phase-dates">Julio 19, 2026</p>
-                        <p class="phase-desc">MetLife Stadium, Nueva York</p>
-                    </div>
-                    <div class="phase-progress"><div class="progress-bar"></div></div>
-                </div>
+            <div class="schedule-rail" id="scheduleRail">
+                <!-- Generated by JS -->
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section id="stats" class="section stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number" data-target="48">0</div>
-                    <div class="stat-label">Equipos</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="104">0</div>
-                    <div class="stat-label">Partidos</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="16">0</div>
-                    <div class="stat-label">Sedes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="39">0</div>
-                    <div class="stat-label">Días</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="3">0</div>
-                    <div class="stat-label">Países</div>
-                </div>
+    <section class="section stats">
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <span class="stat-number" data-target="48">0</span>
+                <span class="stat-label">Equipos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="104">0</span>
+                <span class="stat-label">Partidos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="16">0</span>
+                <span class="stat-label">Ciudades</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="39">0</span>
+                <span class="stat-label">Días</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Países</span>
             </div>
         </div>
     </section>
@@ -811,54 +233,60 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <svg class="trophy-footer" viewBox="0 0 40 50">
-                        <path d="M20 2 L22 10 L30 10 L24 15 L26 23 L20 18 L14 23 L16 15 L10 10 L18 10 Z" fill="#D4AF37"/>
-                        <rect x="16" y="18" width="8" height="12" fill="#D4AF37"/>
-                        <rect x="14" y="30" width="12" height="4" rx="1" fill="#D4AF37"/>
-                        <rect x="12" y="34" width="16" height="5" rx="2" fill="#D4AF37"/>
+                    <svg viewBox="0 0 40 48" width="24" height="29">
+                        <path d="M20 2 L22 10 L30 10 L24 15 L26 23 L20 18 L14 23 L16 15 L10 10 L18 10 Z" fill="#C9A84C"/>
+                        <rect x="16" y="18" width="8" height="10" fill="#C9A84C"/>
+                        <rect x="14" y="28" width="12" height="3" rx="1.5" fill="#C9A84C"/>
+                        <rect x="12" y="31" width="16" height="4" rx="2" fill="#C9A84C"/>
                     </svg>
-                    <span class="logo-text">FIFA World Cup 2026</span>
+                    <span class="footer-title">World Cup 2026</span>
+                </div>
+                <div class="footer-tricolor">
+                    <span class="tri-stripe usa"></span>
+                    <span class="tri-stripe mex"></span>
+                    <span class="tri-stripe can"></span>
                 </div>
                 <div class="footer-info">
-                    <p><em>United2026</em> — El primer Mundial con tres naciones sede</p>
-                    <p class="footer-dates">Junio 11 - Julio 19, 2026</p>
+                    <p>United<span class="byline-em">2026</span> · El primer Mundial en tres continentes</p>
+                    <p class="footer-small">Junio 11 — Julio 19, 2026</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.fifa.com/worldcup" target="_blank">FIFA Official</a>
+                    <a href="https://www.fifa.com" target="_blank" rel="noopener">FIFA.org</a>
                     <a href="#venues">Sedes</a>
                     <a href="#teams">Equipos</a>
+                    <a href="#schedule">Calendario</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Hecho con ❤️ para los amantes del fútbol</p>
+                <p>Diseñado para los amantes del fútbol</p>
             </div>
         </div>
     </footer>
 
     <!-- Player Modal -->
-    <div class="modal-overlay" id="playerModal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Cerrar">
-                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"/></svg>
+    <div class="modal" id="playerModal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-panel">
+            <button class="modal-close" aria-label="Close">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" fill="none"/></svg>
             </button>
             <div class="modal-body">
-                <div class="player-card">
-                    <div class="player-flag-large" id="modalFlag"></div>
-                    <div class="player-info">
-                        <h2 id="modalName">Nombre del Jugador</h2>
-                        <p id="modalTeam">Selección</p>
-                        <p id="modalPosition">Posición</p>
-                        <p id="modalClub">Club</p>
-                    </div>
+                <div class="player-portrait" id="playerFlag"></div>
+                <h3 class="player-name" id="playerName"></h3>
+                <p class="player-team" id="playerTeam"></p>
+                <div class="player-divider"></div>
+                <div class="player-details">
+                    <div class="detail"><span class="detail-label">Posición</span><span class="detail-value" id="playerPosition"></span></div>
+                    <div class="detail"><span class="detail-label">Club</span><span class="detail-value" id="playerClub"></span></div>
                 </div>
-                <div class="player-stats">
-                    <div class="player-stat">
-                        <span class="stat-value" id="modalCaps">0</span>
-                        <span class="stat-label">Partidos</span>
+                <div class="player-numbers">
+                    <div class="num">
+                        <span class="num-value" id="playerCaps">0</span>
+                        <span class="num-label">Partidos</span>
                     </div>
-                    <div class="player-stat">
-                        <span class="stat-value" id="modalGoals">0</span>
-                        <span class="stat-label">Goles</span>
+                    <div class="num">
+                        <span class="num-value" id="playerGoals">0</span>
+                        <span class="num-label">Goles</span>
                     </div>
                 </div>
             </div>
